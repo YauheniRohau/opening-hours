@@ -2,16 +2,22 @@ export const storeTimezone = "America/New_York";
 
 export const serviceHours = [
   {
+    dayOfWeek: 'Sunday',
+    openTime: '05:00 am',
+    closeTime: '11:30 pm',
+    orderCutOffTime: '10:30 am',
+  },
+  {
     dayOfWeek: 'Monday',
-    openTime: '01:00 am',
+    openTime: '06:00 am',
     closeTime: '06:00 pm',
-    orderCutOffTime: '05:30 pm',
+    orderCutOffTime: '05:30 am',
   },
   {
     dayOfWeek: 'Tuesday',
-    openTime: '01:00 am',
+    openTime: '05:30 am',
     closeTime: '11:00 pm',
-    orderCutOffTime: '10:30 pm',
+    orderCutOffTime: '06:00 am',
   },
   {
     dayOfWeek: 'Wednesday',
@@ -29,18 +35,7 @@ export const serviceHours = [
     dayOfWeek: 'Friday',
     openTime: '10:00 am',
     closeTime: '10:30 pm',
-    orderCutOffTime: '11:00 am',
+    orderCutOffTime: '05:30 am',
   },
-  {
-    dayOfWeek: 'Saturday',
-    openTime: '01:00 am',
-    closeTime: '11:30 pm',
-    orderCutOffTime: '10:30 pm',
-  },
-  {
-    dayOfWeek: 'Sunday',
-    openTime: '01:00 am',
-    closeTime: '11:30 pm',
-    orderCutOffTime: '10:30 pm',
-  },
+
 ];

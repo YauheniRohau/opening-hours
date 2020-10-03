@@ -4,9 +4,6 @@ import { serviceHours, storeTimezone } from './mocks.js';
 import './App.css';
 
 function App() {
-
-  const timeRanges = getOpenedTimeRanges(serviceHours, storeTimezone);
-
   const resolvedOpeningHours = resolveOpeningHours(serviceHours, storeTimezone);
 
   return (
@@ -17,14 +14,13 @@ function App() {
           <strong>
             {
               resolvedOpeningHours.isOpen
-                ? `Open now. Closes: ${resolvedOpeningHours.currentTimeRange.end}`
-                : 'Closed now.'
-                // : `Closed now. Opens: ${resolvedOpeningHours.currentTimeRange.start}`
+                ? `Open now. Closes: ${resolvedOpeningHours.closeTime}`
+                : `Closed now. Opens: ${resolvedOpeningHours.openTime}`
             }
           </strong>
           <h2>Time ranges:</h2>
           {
-            timeRanges && timeRanges.map((hour) =>
+            resolvedOpeningHours.openedTimeRanges && resolvedOpeningHours.openedTimeRanges.map((hour) =>
               <div>{`${hour.start} - ${hour.end}`}</div>
             )
           }
